@@ -6,6 +6,43 @@
     <title>TASK CARD</title>
 </head>
 <body>
-    
+    <section role="region" class="card-container" data-testid="test-todo-card">
+        <h2 class="task-title" data-testid="test-todo-title">
+            Read a Novel
+        </h2>
+        <p class="description" data-testid="test-todo-description">
+            Read a novel for 30 minutes every day.
+        </p>
+        <ul role="list" data-testid="test-todo-tags">
+            <li class="tag" data-testid="test-todo-tag-urgent">
+                Reading
+            </li>
+            <li class="tag" data-testid="test-todo-tag-urgent">
+                Leisure
+            </li>
+        </ul>
+        <p>
+            <span>
+                <input type="checkbox" name="" id="" data-testid="test-todo-complete-toggle">
+            </span>
+            <span>
+                <span class="status" data-testid="test-todo-status">Status: In Progress</span>
+            </span>
+            <span class="priority" data-testid="test-todo-priority">Priority: High
+            </span>
+        </p>
+        <p>
+            <span class="due-date" data-testid="test-todo-due-date">
+                Due: April 18,2026
+            </span>
+            <span class="due-time" data-testid="test-todo-time-remaining">
+                Time remaining: 3 days
+            </span>
+        </p>
+        <div>
+            <button class="edit-button" data-testid="test-edit-button">Edit</button>
+            <button class="delete-button" data-testid="test-delete-button">Delete</button>
+        </div>
+    </section>
 </body>
 </html>
