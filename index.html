@@ -14,7 +14,7 @@
         <p class="description" data-testid="test-todo-description">
             Read a novel for 30 minutes every day.
         </p>
-        <ul role="list" data-testid="test-todo-tags">
+        <ul role="list" data-testid="test-todo-tags" class="list">
             <li class="tag" data-testid="test-todo-tag-urgent">
                 Reading
             </li>
@@ -22,17 +22,23 @@
                 Leisure
             </li>
         </ul>
-        <p>
-            <span>
-                <input type="checkbox" name="" id="" data-testid="test-todo-complete-toggle">
+        <p class="priority-status">
+            <span >
+                <span>
+                    <input type="checkbox" name="" id="" class="checkbox"  data-testid="test-todo-complete-toggle">
+                </span>
+                <span>
+                Status:
+                    <span class="status" data-testid="test-todo-status"> In Progress</span>
+                </span>
             </span>
             <span>
-                <span class="status" data-testid="test-todo-status">Status: In Progress</span>
-            </span>
-            <span class="priority" data-testid="test-todo-priority">Priority: High
+                Priority:
+                <span class="priority" data-testid="test-todo-priority"> High
+                </span>
             </span>
         </p>
-        <p>
+        <p class="due">
             <span class="due-date" data-testid="test-todo-due-date">
                 Due: April 18,2026
             </span>
@@ -40,7 +46,7 @@
                 Time remaining: 3 days
             </span>
         </p>
-        <div>
+        <div class="buttons">
             <button class="edit-button" data-testid="test-edit-button">Edit</button>
             <button class="delete-button" data-testid="test-delete-button">Delete</button>
         </div>
