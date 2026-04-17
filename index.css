@@ -4,6 +4,7 @@ body{
     align-items: center;
     color: white;
     padding-top:10%;
+    font-family: roboto;
 }
 .card-container {
     max-width: 60%;
@@ -20,15 +21,55 @@ body{
     align-items: center;
     background-image: linear-gradient(to bottom right, white, blue);
 }
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
 .task-title {
     font-size: 24px;
     margin: 0;
     color: #333;
     margin-bottom: 10px;
-    transition: 0.3s ease;
-}
-.description{
+    transition: 0.3s ease; 
     text-align: center;
+}
+.description-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.description {
+    margin: 0;
+    line-height: 1.5;
+    flex: 1 1 auto;
+}
+.description.collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.collapse-button {
+    margin: 0;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-end;
+    white-space: nowrap;
+}
+.collapse-button:hover {
+    background-color: rgba(0, 0, 0, 0.16);
 }
 p{
     margin: 0;
@@ -86,18 +127,36 @@ p{
     background-color: #17c112;
 }
 .status{
-    color: orange;
     margin-right: 30px;
     transition: color 0.3s ease;
+    border: none;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 .priority{
-    color: red;
+    transition: color 0.3s ease;
 }
-
+.priority-indicator{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline-block;
+    margin-left: 5px;
+}
 @media (max-width:720px) {
     .card-container{
         max-width: 100%;
         width: 100%;
+    }
+    .priority-status{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
     body{
         padding: 0px;
