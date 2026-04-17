@@ -12,12 +12,12 @@
 </head>
 <body>
     <section role="region" class="card-container" data-testid="test-todo-card">
-        <h2 class="task-title" data-testid="test-todo-title">
-            Read a Novel
-        </h2>
-        <p class="description" data-testid="test-todo-description">
-            Read a novel for 30 minutes every day.
-        </p>
+        <div class="card">
+        <h2 class="task-title" data-testid="test-todo-title">Read a Novel</h2>
+        <div class="description-wrapper">
+            <p id="description-content" class="description" data-testid="test-todo-description">Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.Read a novel for 30 minutes every day.</p>
+            <button type="button" class="collapse-button" data-testid="test-collapse-button" aria-expanded="false" aria-controls="description-content">Show more</button>
+        </div>
         <ul role="list" data-testid="test-todo-tags" class="list">
             <li class="tag" data-testid="test-todo-tag-urgent">
                 Reading
@@ -27,33 +27,49 @@
             </li>
         </ul>
         <p class="priority-status">
-            <span >
-                <span>
-                    <input type="checkbox" name="" id="" class="checkbox"  data-testid="test-todo-complete-toggle">
-                </span>
-                <span>
+            <span>
+                <input type="checkbox" class="checkbox" data-testid="test-todo-completion-checkbox">
                 Status:
-                    <span class="status" data-testid="test-todo-status"> In Progress</span>
-                </span>
+                    <select name="status" class="status" data-testid="test-todo-status-control">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Done">Done</option>
+                    </select>
             </span>
             <span>
                 Priority:
-                <span class="priority" data-testid="test-todo-priority"> High
-                </span>
+                <span class="priority" data-testid="test-todo-priority">High</span> <span class="priority-indicator"></span>
             </span>
         </p>
         <p class="due">
             <time class="due-date" data-testid="test-todo-due-date">
-                Due: April 18,2026
+                Due Date: April 18,2026
             </time>
-            <time class="due-time" data-testid="test-todo-time-remaining">
-                Time remaining: 2 days
+            <time class="due-time" data-testid="test-todo-time-remaining" aria-live="polite">
+                Time remaining: 
             </time>
         </p>
         <div class="buttons">
             <button class="edit-button" data-testid="test-edit-button">Edit</button>
             <button class="delete-button" data-testid="test-delete-button">Delete</button>
         </div>
+        </div>
+        <form class="edit-form-container" data-testid="test-todo-edit-form">
+            <label for="title" class="title-label">Task Title</label> <br> <input type="text" id="title" name="title" class="title-input" data-testid="test-todo-edit-title-input"> <br> <label for="description" class="description-label">Task Description</label> <br>
+             <textarea type="text" id="description-input" name="description" class="description-input" data-testid="test-todo-edit-description-input"></textarea> <br>
+             <label for="priority" class="priority-label">Priority Level</label><br>
+             <select name="priority" class="priority-input" data-testid="test-todo-edit-priority-select">
+                 <option value="Low">Low</option>
+                 <option value="Medium">Medium</option>
+                 <option value="High">High</option>
+             </select>
+             <br><label for="due-date" class="due-date-label">Due Date</label> <br> <input type="date" id="due-date-input" name="due-date" class="due-date-input" data-testid="test-todo-edit-due-date-input"> <br>
+             <p class="due-date-edit-display"></p>
+                <div class="edit-form-buttons">
+                    <button type="button" class="save-button" data-testid="test-todo-save-button">Save</button>
+                    <button type="button" class="cancel-button" data-testid="test-todo-cancel-button">Cancel</button>
+                </div>
+        </form>
     </section>
     <script src="./index.js">
     </script>
