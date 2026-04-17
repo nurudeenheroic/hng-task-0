@@ -1,0 +1,63 @@
+.edit-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+    display: none;
+}
+label{
+    /* background: linear-gradient(to right, blue, white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; */
+  color: blue;
+}
+.title-input, .description-input, .due-date-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: -18px;
+    box-sizing: border-box;
+}
+.priority-input {
+    box-sizing: border-box;
+    margin-top: -18px;
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.due-date-edit-display {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+}
+.save-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #19da13;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+}   
+.cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.cancel-button:hover {
+    background-color: #a9a9a9;
+}
+.save-button:hover {
+    background-color: #17c112;
+}
